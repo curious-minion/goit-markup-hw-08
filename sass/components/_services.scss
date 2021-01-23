@@ -1,6 +1,10 @@
 /* Services */
 
 .services {
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+
   padding-top: 94px;
   padding-bottom: 94px;
   background-color: getColor("basic-white");

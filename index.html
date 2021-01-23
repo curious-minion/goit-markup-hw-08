@@ -22,34 +22,55 @@
           <a href="./index.html" class="link">
             <span class="logo-half">Web</span>Studio</a
           >
-          <ul class="site-nav list">
-            <li class="item">
-              <a href="./index.html" class="link-current">Студия</a>
-            </li>
-            <li class="item">
-              <a href="./portfolio.html" class="link">Портфолио</a>
-            </li>
-            <li class="item"><a href="#" class="link">Контакты</a></li>
-          </ul>
-        </nav>
-        <ul class="contact-info">
-          <li class="item">
-            <a class="link" href="mailto:info@devstudio.com">
-              <svg class="icon-contact" width="16" height="12">
-                <use href="./images/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="item">
-            <a class="link" href="tel:+380961111111">
-              <svg class="icon-contact" width="10" height="16">
-                <use href="./images/sprite.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
+          <button
+            type="button"
+            class="menu-button is-open"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
             >
-          </li>
-        </ul>
+              <use
+                class="icon-cross"
+                href="./images/sprite.svg#icon-cross"
+              ></use>
+              <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <div class="menu-container" id="menu-container" data-menu>
+            <ul class="site-nav list">
+              <li class="item">
+                <a href="./index.html" class="link current">Студия</a>
+              </li>
+              <li class="item">
+                <a href="./portfolio.html" class="link">Портфолио</a>
+              </li>
+              <li class="item"><a href="#" class="link">Контакты</a></li>
+            </ul>
+            <ul class="contact-info">
+              <li class="item">
+                <a class="link" href="mailto:info@devstudio.com">
+                  <svg class="icon-contact" width="16" height="12">
+                    <use href="./images/sprite.svg#envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="item">
+                <a class="link" href="tel:+380961111111">
+                  <svg class="icon-contact" width="10" height="16">
+                    <use href="./images/sprite.svg#smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
     <!-- hero -->
@@ -456,7 +477,7 @@
     <!-- contacts info -->
     <footer class="footer">
       <div class="container network">
-        <div>
+        <div class="footer-contacts">
           <a href="./index.html" class="logo">
             <span class="logo-half">Web</span>Studio</a
           >
@@ -471,28 +492,28 @@
         <div class="join-us">
           <p>присоединяйтесь</p>
           <ul class="social-links footer">
-            <li>
+            <li class="item">
               <a class="link" href="#">
                 <svg class="icon-socials" width="20" height="20">
                   <use href="./images/sprite.svg#instagram"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="item">
               <a class="link" href="#">
                 <svg class="icon-socials" width="20" height="20">
                   <use href="./images/sprite.svg#twitter"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="item">
               <a class="link" href="#">
                 <svg class="icon-socials" width="20" height="20">
                   <use href="./images/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="item">
               <a class="link" href="#">
                 <svg class="icon-socials" width="20" height="20">
                   <use href="./images/sprite.svg#linkedin"></use>
@@ -524,5 +545,6 @@
     </footer>
     <script src="./js/modal.js"></script>
     <script src="./js/place-order.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

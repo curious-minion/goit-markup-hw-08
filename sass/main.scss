@@ -3,10 +3,12 @@
 @import "./base/fonts";
 @import "./utils/variables";
 @import "./utils/mixin";
+@import "./utils/placeholders";
 
 @import "./base/common";
 
 @import "./components/logo";
+@import "./components/menu";
 @import "./components/navigation";
 @import "./components/hero";
 @import "./components/features";
