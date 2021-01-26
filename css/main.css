@@ -408,6 +408,11 @@ img {
   height: auto;
 }
 
+.team-photo,
+.project-photo {
+  width: 100%;
+}
+
 /* logo header+footer*/
 .logo.header a {
   display: -webkit-inline-box;
@@ -496,6 +501,8 @@ img {
     top: 100%;
     left: 0;
     width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .menu-container.is-open {
     display: block;
@@ -520,8 +527,16 @@ img {
 /* navigation links */
 .header-nav {
   position: fixed;
+  z-index: 2;
+  top: 0;
   background-color: #ffffff;
   width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .header-nav {
+    position: static;
+  }
 }
 
 .logo.header {
@@ -556,7 +571,6 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-bottom: 8px;
     font-size: 18px;
     line-height: 1.17;
   }
@@ -596,6 +610,12 @@ img {
   color: #2196f3;
 }
 
+@media screen and (max-width: 767px) {
+  .site-nav .link.link.current {
+    padding-bottom: 8px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .site-nav .link {
     padding-top: 32px;
@@ -610,11 +630,14 @@ img {
 }
 
 @media screen and (max-width: 767px) {
-  .contact-info {
-    margin-bottom: 60px;
-  }
   .contact-info .item + .item {
     margin-top: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact-info {
+    margin-top: 60px;
   }
 }
 
@@ -672,6 +695,12 @@ img {
   color: #2196f3;
 }
 
+@media screen and (max-width: 767px) {
+  .contact-info .link {
+    font-size: 18px;
+  }
+}
+
 .icon-contact {
   fill: currentColor;
   margin-right: 10px;
@@ -697,27 +726,13 @@ img {
 
 /* hero */
 .hero {
+  margin-top: 61px;
   background: #2f303a;
   text-align: center;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
-}
-
-@media screen and (max-width: 1199px) {
-  .hero {
-    padding-top: 118px;
-    padding-bottom: 118px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .hero {
-    max-width: 1600px;
-    padding-top: 200px;
-    padding-bottom: 200px;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -727,15 +742,17 @@ img {
   }
 }
 
-@media screen and (max-width: 480px) and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  .hero .hero {
-    background-image: url(../images/overlay-mobile@2x.jpg);
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/overlay-mobile@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/overlay-mobile@2x.jpg);
   }
 }
 
-@media screen and (max-width: 480px) and (min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
-  .hero .hero {
-    background-image: url(../images/overlay-mobile@3x.jpg);
+@media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 3dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/overlay-mobile@3x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/overlay-mobile@3x.jpg);
   }
 }
 
@@ -746,15 +763,17 @@ img {
   }
 }
 
-@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  .hero .hero {
-    background-image: url(../images/overlay-tablet@2x.jpg);
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/overlay-tablet@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/overlay-tablet@2x.jpg);
   }
 }
 
-@media screen and (min-width: 481px) and (min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
-  .hero .hero {
-    background-image: url(../images/overlay-tablet@3x.jpg);
+@media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 3dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/overlay-tablet@3x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/overlay-tablet@3x.jpg);
   }
 }
 
@@ -762,18 +781,34 @@ img {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/overlay-desktop.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/overlay-desktop.jpg);
+    margin-top: 0;
   }
 }
 
-@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  .hero .hero {
-    background-image: url(../images/overlay-desktop@2x.jpg);
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/overlay-desktop@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/overlay-desktop@2x.jpg);
   }
 }
 
-@media screen and (min-width: 769px) and (min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
-  .hero .hero {
-    background-image: url(../images/overlay-desktop@3x.jpg);
+@media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 3dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/overlay-desktop@3x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/overlay-desktop@3x.jpg);
+  }
+}
+
+.overlay {
+  padding-top: 118px;
+  padding-bottom: 118px;
+}
+
+@media screen and (min-width: 1200px) {
+  .overlay {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 
@@ -859,6 +894,20 @@ img {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .button-close {
@@ -1666,6 +1715,13 @@ footer {
   padding-bottom: 94px;
 }
 
+@media screen and (max-width: 1200px) {
+  .projects .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
 .buttons-menu .button {
   display: inline-block;
   border: 1px solid transparent;
@@ -1685,6 +1741,31 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 50px;
+  min-height: 131px;
+  padding-bottom: 34px;
+  margin: -4px;
+}
+
+.projects .buttons-menu .item {
+  margin: 4px;
+}
+
+@media screen and (max-width: 767px) {
+  .projects .buttons-menu {
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .projects .buttons-menu {
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects .buttons-menu {
+    padding-bottom: 50px;
+  }
 }
 
 .buttons-menu .item + .item {
@@ -1760,30 +1841,47 @@ footer {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0;
-  padding: 0;
+  margin: -15px;
+}
+
+@media screen and (max-width: 767px) {
+  .projects-list {
+    margin: 0;
+  }
 }
 
 .projects-list .item {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-
-.projects-list .item:nth-child(3n) {
-  margin-right: 0;
-}
-
-.projects-list .item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .projects-list .item:hover .card-overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+@media screen and (max-width: 767px) {
+  .projects-list .item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .projects-list .item {
+    margin: 15px;
+    width: calc((100% - 2 * 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects-list .item {
+    width: 370px;
+    margin: 0;
+  }
+  .projects-list .item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .card {
@@ -1799,12 +1897,34 @@ footer {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 63px 24px;
+  padding-left: 24px;
+  padding-right: 24px;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
+}
+
+@media screen and (max-width: 767px) {
+  .card-overlay {
+    padding-top: 77px;
+    padding-bottom: 77px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card-overlay {
+    padding-top: 49px;
+    padding-bottom: 49px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card-overlay {
+    padding-top: 63px;
+    padding-bottom: 63px;
+  }
 }
 
 .card-overlay p {

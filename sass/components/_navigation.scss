@@ -2,8 +2,14 @@
 
 .header-nav {
   position: fixed;
+  z-index: 2;
+  top: 0;
   background-color: getColor("basic-white");
   width: 100%;
+
+  @media screen and (min-width: 768px) {
+    position: static;
+  }
 }
 
 .logo.header {
@@ -24,7 +30,7 @@
   @media screen and (max-width: 767px) {
     flex-direction: column;
     align-items: center;
-    padding-bottom: 8px;
+
     font-size: 18px;
     line-height: 1.17;
 
@@ -58,6 +64,11 @@
   &:focus {
     color: getColor("accent-color");
   }
+  @media screen and (max-width: 767px) {
+    &.link.current {
+      padding-bottom: 8px;
+    }
+  }
   @media screen and (min-width: 768px) {
     padding-top: 32px;
     padding-bottom: 32px;
@@ -74,7 +85,11 @@
     .item + .item {
       margin-top: 16px;
     }
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
   }
 
   @media screen and (min-width: 768px) {
@@ -114,6 +129,10 @@
   &:hover,
   &:focus {
     color: getColor("accent-color");
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
   }
 }
 

@@ -1,26 +1,16 @@
 /* hero */
 .hero {
-  // display: block;
+  // position: relative;
+  margin-top: 61px;
   background: getColor("footer-hero-bgr");
   text-align: center;
 
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 
   background-repeat: no-repeat;
-  background-position: center;
+
   background-size: cover;
-
-  @media screen and (max-width: 1199px) {
-    padding-top: 118px;
-    padding-bottom: 118px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    max-width: 1600px;
-
-    padding-top: 200px;
-    padding-bottom: 200px;
-  }
 
   @media screen and (max-width: 480px) {
     background-image: linear-gradient(
@@ -31,20 +21,22 @@
       url(../images/overlay-mobile.jpg);
   }
 
-  @media screen and (max-width: 480px) and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    .hero {
-      background-image: url(../images/overlay-mobile@2x.jpg);
-    }
+  @media screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/overlay-mobile@2x.jpg);
   }
 
-  @media screen and (max-width: 480px) and (min-device-pixel-ratio: 3),
-    screen and (min-resolution: 288dpi),
-    screen and (min-resolution: 3dppx) {
-    .hero {
-      background-image: url(../images/overlay-mobile@3x.jpg);
-    }
+  @media screen and (min-resolution: 3dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/overlay-mobile@3x.jpg);
   }
 
   @media screen and (min-width: 481px) {
@@ -56,20 +48,22 @@
       url(../images/overlay-tablet.jpg);
   }
 
-  @media screen and (min-width: 481px) and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    .hero {
-      background-image: url(../images/overlay-tablet@2x.jpg);
-    }
+  @media screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/overlay-tablet@2x.jpg);
   }
 
-  @media screen and (min-width: 481px) and (min-device-pixel-ratio: 3),
-    screen and (min-resolution: 288dpi),
-    screen and (min-resolution: 3dppx) {
-    .hero {
-      background-image: url(../images/overlay-tablet@3x.jpg);
-    }
+  @media screen and (min-resolution: 3dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/overlay-tablet@3x.jpg);
   }
 
   @media screen and (min-width: 769px) {
@@ -79,22 +73,37 @@
         rgba(47, 48, 58, 0.4)
       ),
       url(../images/overlay-desktop.jpg);
+    margin-top: 0;
   }
 
-  @media screen and (min-width: 769px) and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    .hero {
-      background-image: url(../images/overlay-desktop@2x.jpg);
-    }
+  @media screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/overlay-desktop@2x.jpg);
   }
 
-  @media screen and (min-width: 769px) and (min-device-pixel-ratio: 3),
-    screen and (min-resolution: 288dpi),
-    screen and (min-resolution: 3dppx) {
-    .hero {
-      background-image: url(../images/overlay-desktop@3x.jpg);
-    }
+  @media screen and (min-resolution: 3dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/overlay-desktop@3x.jpg);
+  }
+}
+
+.overlay {
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 
@@ -173,6 +182,15 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    height: 609px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .button-close {
