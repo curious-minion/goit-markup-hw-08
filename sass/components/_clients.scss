@@ -47,10 +47,6 @@
   }
 }
 
-// .clients-list .item + .item {
-//   margin-left: 30px;
-// }
-
 .clients-list .link {
   @include centeredFlex();
   justify-content: center;

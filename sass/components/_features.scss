@@ -2,14 +2,15 @@
 
 .features {
   @extend %list;
+  background-color: getColor("basic-white");
+
   @media screen and (max-width: 1199px) {
     padding-top: 60px;
   }
+
   @media screen and (min-width: 1200px) {
     padding-top: 94px;
   }
-
-  background-color: getColor("basic-white");
 }
 
 .feature-list {

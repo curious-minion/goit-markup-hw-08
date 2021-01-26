@@ -5,7 +5,7 @@ footer {
   padding-bottom: 60px;
   background-color: getColor("footer-hero-bgr");
 
-  @media screen and(max-width: 1199px) {
+  @media screen and (max-width: 1199px) {
     .adress,
     .join-us,
     .subscription {
@@ -19,7 +19,7 @@ footer {
   padding: 0;
   color: getColor("basic-white");
 
-  @media screen and(max-width: 1199px) {
+  @media screen and (max-width: 1199px) {
     font-size: 24px;
   }
 }
