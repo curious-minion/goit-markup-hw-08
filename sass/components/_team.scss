@@ -76,6 +76,9 @@
 .social-links {
   @include centeredFlex();
   justify-content: space-between;
+  @media screen and (max-width: 1199px) {
+    justify-content: center;
+  }
 }
 
 .social-links .link {

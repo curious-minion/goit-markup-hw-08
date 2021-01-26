@@ -1361,6 +1361,14 @@ img {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 1199px) {
+  .social-links {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .social-links .link {
   display: -webkit-box;
   display: -ms-flexbox;
