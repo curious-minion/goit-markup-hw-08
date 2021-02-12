@@ -800,6 +800,12 @@ img {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+  }
+}
+
 .overlay {
   padding-top: 118px;
   padding-bottom: 118px;
@@ -862,7 +868,7 @@ img {
   height: 100%;
   left: 0;
   top: 0;
-  z-index: 1;
+  z-index: 3;
   overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
@@ -914,6 +920,12 @@ img {
   .modal {
     width: 450px;
     height: 609px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .modal {
+    min-height: 609px;
   }
 }
 
@@ -1193,6 +1205,17 @@ img {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+  .subtitle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .features p {
@@ -1759,9 +1782,6 @@ footer {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-bottom: 50px;
   min-height: 131px;
   padding-bottom: 34px;
@@ -1781,6 +1801,9 @@ footer {
 @media screen and (min-width: 768px) {
   .projects .buttons-menu {
     padding-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -1790,8 +1813,8 @@ footer {
   }
 }
 
-.buttons-menu .item + .item {
-  margin-left: 8px;
+.buttons-menu .item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .button {

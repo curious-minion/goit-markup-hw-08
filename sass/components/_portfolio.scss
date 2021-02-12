@@ -24,7 +24,7 @@
 .projects .buttons-menu {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+
   margin-bottom: 50px;
 
   min-height: 131px;
@@ -41,6 +41,7 @@
 
   @media screen and (min-width: 768px) {
     padding-bottom: 30px;
+    justify-content: center;
   }
 
   @media screen and (min-width: 1200px) {
@@ -48,8 +49,10 @@
   }
 }
 
-.buttons-menu .item + .item {
-  margin-left: 8px;
+.buttons-menu .item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
 }
 
 .button {
@@ -114,7 +117,6 @@
 }
 
 .projects-list {
-  
   display: flex;
   flex-wrap: wrap;
   margin: -15px;
@@ -125,7 +127,6 @@
 }
 
 .projects-list .item {
-  
   &:hover .card-overlay {
     transform: translateY(0);
   }

@@ -93,6 +93,10 @@
       ),
       url(../images/overlay-desktop@3x.jpg);
   }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+  }
 }
 
 .overlay {
@@ -198,6 +202,9 @@
   @media screen and (min-width: 480px) {
     width: 450px;
     height: 609px;
+  }
+  @media screen and (max-width: 1199px) {
+    min-height: 609px;
   }
   @media screen and (min-width: 1200px) {
     width: 528px;
